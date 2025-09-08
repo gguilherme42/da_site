@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos do D.A. Filosofia - 2024</title>
+    <!-- Chosen Palette: Soothing Gradient -->
+    <!-- Application Structure Plan: A single-page dashboard structure was chosen, featuring an interactive grid of cards. Each card represents a project. Clicking a card opens a modal window with detailed information. This approach is superior to a static list as it encourages user interaction, keeps the initial view clean and organized, and allows for scalable content presentation without clutter. The user flow is simple: view all projects, select one for details, and close to return, which is highly intuitive. -->
+    <!-- Visualization & Content Choices: The source document is a simple list. Goal: Organize and inform interactively. Presentation Method: Interactive cards in a responsive grid, revealing details in a modal. Interaction: Hover effects on cards for feedback, click to open a modal. Justification: This transforms a flat list into an engaging experience, allowing users to focus on one project at a time. Method: HTML/Tailwind for structure, vanilla JS for modal functionality and dynamic content rendering. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(45deg, #1e3a8a, #4f46e5, #8b5cf6, #a855f7);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .card-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen flex items-center justify-center p-4">
+
+    <div class="container mx-auto max-w-6xl text-center">
+        <header class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-2">Projetos do Departamento Acadêmico</h1>
+            <p class="text-xl md:text-2xl font-light text-indigo-200">Filosofia - 2024</p>
+        </header>
+
+        <main>
+             <p class="text-lg text-indigo-100 max-w-3xl mx-auto mb-12">
+                Bem-vindo ao painel de projetos do D.A. de Filosofia. Aqui você pode explorar as principais iniciativas que planejamos para este ano, pensadas para integrar, enriquecer e fortalecer nossa comunidade acadêmica. Clique em qualquer um dos cards abaixo para saber mais detalhes sobre cada proposta.
+            </p>
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+        </main>
+    </div>
+
+    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 hidden z-50">
+        <div id="modal-content" class="bg-white text-gray-800 rounded-2xl shadow-2xl p-8 max-w-2xl w-full relative transform transition-all duration-300 scale-95">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-900 text-3xl">&times;</button>
+            <h2 id="modal-title" class="text-3xl font-bold text-indigo-700 mb-4"></h2>
+            <p id="modal-description" class="text-lg text-gray-600"></p>
+        </div>
+    </div>
+
+    <script>
+        const projects = [
+            {
+                icon: '🎉',
+                title: 'Confraternização do Curso',
+                description: 'Este projeto visa organizar um evento de confraternização para todos os alunos e professores do curso de Filosofia, fortalecendo os laços da nossa comunidade acadêmica. Será uma oportunidade para networking, troca de ideias e celebração em um ambiente descontraído.'
+            },
+            {
+                icon: '📖',
+                title: 'Clube do Livro',
+                description: 'O Clube do Livro de Filosofia selecionará uma obra por mês para leitura e discussão em encontros abertos. O objetivo é aprofundar o conhecimento em textos clássicos e contemporâneos, estimulando o debate e a análise crítica fora do ambiente formal da sala de aula.'
+            },
+            {
+                icon: '🎓',
+                title: 'Ensino Médio na MIC',
+                description: 'Uma iniciativa para levar a filosofia para além dos muros da universidade. Alunos do nosso curso irão preparar e apresentar mini-cursos e oficinas sobre temas filosóficos em escolas de Ensino Médio, despertando o interesse dos jovens pela área e divulgando o nosso curso.'
+            },
+            {
+                icon: '💡',
+                title: 'Revitalização da Sala e Redes Sociais',
+                description: 'Este projeto foca em modernizar o espaço físico do nosso Departamento Acadêmico, tornando-o mais acolhedor e funcional para os estudantes. Além disso, vamos reestruturar nossa presença online, com conteúdo relevante e maior interação nas redes sociais.'
+            },
+            {
+                icon: '🏅',
+                title: 'Olimpíadas de Filosofia',
+                description: 'Organização de uma competição de conhecimento filosófico voltada para estudantes do Ensino Médio da região. As Olimpíadas de Filosofia buscam estimular o pensamento crítico, a argumentação e o interesse pela disciplina, além de premiar os talentos emergentes.'
+            },
+            {
+                icon: '👕',
+                title: 'Moletons e Camisetas da Filosofia',
+                description: 'Criação e venda de vestuário personalizado do curso de Filosofia. Com designs criativos e referências filosóficas, o projeto busca criar um sentimento de identidade e pertencimento entre os alunos, além de arrecadar fundos para outras atividades do D.A.'
+            }
+        ];
+
+        const grid = document.getElementById('projects-grid');
+        const modal = document.getElementById('project-modal');
+        const modalContent = document.getElementById('modal-content');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+        const closeModalBtn = document.getElementById('close-modal');
+
+        projects.forEach(project => {
+            const card = document.createElement('div');
+            card.className = 'bg-white/10 backdrop-blur-sm p-8 rounded-2xl flex flex-col items-center justify-center text-center cursor-pointer card-hover-effect';
+            card.innerHTML = `
+                <div class="text-6xl mb-4">${project.icon}</div>
+                <h3 class="text-2xl font-bold">${project.title}</h3>
+            `;
+            card.addEventListener('click', () => {
+                modalTitle.textContent = project.title;
+                modalDescription.textContent = project.description;
+                modal.classList.remove('hidden');
+                setTimeout(() => modalContent.classList.remove('scale-95'), 10);
+            });
+            grid.appendChild(card);
+        });
+
+        const closeModal = () => {
+            modalContent.classList.add('scale-95');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
