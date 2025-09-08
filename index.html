@@ -31,6 +31,14 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
+        .organizer-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        .social-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
     </style>
 </head>
 <body class="text-white min-h-screen flex items-center justify-center p-4">
@@ -48,6 +56,198 @@
             <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
         </main>
+
+        <section class="mt-20">
+            <h2 class="text-3xl font-bold mb-8">Nossas Redes Sociais</h2>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-8">
+                <div class="social-card p-6 rounded-2xl flex flex-col items-center">
+                    <a href="#" class="text-white hover:text-indigo-200 transition-colors duration-200">
+                        <div class="text-5xl mb-4">📸</div>
+                        <span class="text-lg font-semibold">Instagram</span>
+                    </a>
+                </div>
+                <div class="social-card p-6 rounded-2xl flex flex-col items-center">
+                    <a href="#" class="text-white hover:text-indigo-200 transition-colors duration-200">
+                        <div class="text-5xl mb-4">👍</div>
+                        <span class="text-lg font-semibold">Facebook</span>
+                    </a>
+                </div>
+                <div class="social-card p-6 rounded-2xl flex flex-col items-center">
+                    <a href="#" class="text-white hover:text-indigo-200 transition-colors duration-200">
+                        <div class="text-5xl mb-4">🎵</div>
+                        <span class="text-lg font-semibold">TikTok</span>
+                    </a>
+                </div>
+                <div class="social-card p-6 rounded-2xl flex flex-col items-center">
+                    <a href="#" class="text-white hover:text-indigo-200 transition-colors duration-200">
+                        <div class="text-5xl mb-4">▶️</div>
+                        <span class="text-lg font-semibold">YouTube</span>
+                    </a>
+                </div>
+                <div class="social-card p-6 rounded-2xl flex flex-col items-center">
+                    <a href="#" class="text-white hover:text-indigo-200 transition-colors duration-200">
+                        <div class="text-5xl mb-4">🐦</div>
+                        <span class="text-lg font-semibold">X (Twitter)</span>
+                    </a>
+                </div>
+                <div class="social-card p-6 rounded-2xl flex flex-col items-center">
+                    <a href="mailto:da.filosofia@unisinos.br" class="text-white hover:text-indigo-200 transition-colors duration-200">
+                        <div class="text-5xl mb-4">📧</div>
+                        <span class="text-lg font-semibold">E-mail</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-20">
+            <h2 class="text-3xl font-bold mb-8">Organizadores</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="organizer-card p-6 rounded-2xl flex flex-col items-center">
+                    <img src="./_files/profile-pic.JPG" alt="Foto de Guilherme Rosa" class="w-32 h-32 rounded-full mb-4 object-cover">
+                    <h3 class="text-xl font-semibold">Guilherme Rosa</h3>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: Instagram -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.723.01 3.697.056 2.763.13 4.696.985 5.867 2.156A5.808 5.808 0 0022 10.218c0 1.07.01 1.363.056 2.337.13 2.763-.985 4.696-2.156 5.867a5.808 5.808 0 01-3.415 1.54c-1.07.057-1.363.067-2.337.067-2.43 0-2.723-.01-3.697-.056-2.763-.13-4.696-.985-5.867-2.156A5.808 5.808 0 012 13.782c0-1.07-.01-1.363-.056-2.337-.13-2.763.985-4.696 2.156-5.867A5.808 5.808 0 0110.218 2H12.315zM12 15.111a3.111 3.111 0 100-6.222 3.111 3.111 0 000 6.222z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: LinkedIn -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.766s.784-1.766 1.75-1.766 1.75.79 1.75 1.766-.783 1.766-1.75 1.766zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="organizer-card p-6 rounded-2xl flex flex-col items-center">
+                    <img src="./_files/Captura de tela 2025-09-07 230447.png" alt="Foto de Guilherme Barbosa" class="w-32 h-32 rounded-full mb-4 object-cover">
+                    <h3 class="text-xl font-semibold">Guilherme Barbosa</h3>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: Instagram -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.723.01 3.697.056 2.763.13 4.696.985 5.867 2.156A5.808 5.808 0 0022 10.218c0 1.07.01 1.363.056 2.337.13 2.763-.985 4.696-2.156 5.867a5.808 5.808 0 01-3.415 1.54c-1.07.057-1.363.067-2.337.067-2.43 0-2.723-.01-3.697-.056-2.763-.13-4.696-.985-5.867-2.156A5.808 5.808 0 012 13.782c0-1.07-.01-1.363-.056-2.337-.13-2.763.985-4.696 2.156-5.867A5.808 5.808 0 0110.218 2H12.315zM12 15.111a3.111 3.111 0 100-6.222 3.111 3.111 0 000 6.222z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: LinkedIn -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.766s.784-1.766 1.75-1.766 1.75.79 1.75 1.766-.783 1.766-1.75 1.766zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="organizer-card p-6 rounded-2xl flex flex-col items-center">
+                    <img src="./_files/eric-dorneles-pic.png" alt="Foto de Eric Dorneles" class="w-32 h-32 rounded-full mb-4 object-cover">
+                    <h3 class="text-xl font-semibold">Eric Dorneles</h3>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: Instagram -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.723.01 3.697.056 2.763.13 4.696.985 5.867 2.156A5.808 5.808 0 0022 10.218c0 1.07.01 1.363.056 2.337.13 2.763-.985 4.696-2.156 5.867a5.808 5.808 0 01-3.415 1.54c-1.07.057-1.363.067-2.337.067-2.43 0-2.723-.01-3.697-.056-2.763-.13-4.696-.985-5.867-2.156A5.808 5.808 0 012 13.782c0-1.07-.01-1.363-.056-2.337-.13-2.763.985-4.696 2.156-5.867A5.808 5.808 0 0110.218 2H12.315zM12 15.111a3.111 3.111 0 100-6.222 3.111 3.111 0 000 6.222z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: LinkedIn -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.766s.784-1.766 1.75-1.766 1.75.79 1.75 1.766-.783 1.766-1.75 1.766zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="organizer-card p-6 rounded-2xl flex flex-col items-center">
+                    <img src="./_files/eik-costa-pic.png" alt="Foto de Erik Costa" class="w-32 h-32 rounded-full mb-4 object-cover">
+                    <h3 class="text-xl font-semibold">Erik Costa</h3>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: Instagram -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.723.01 3.697.056 2.763.13 4.696.985 5.867 2.156A5.808 5.808 0 0022 10.218c0 1.07.01 1.363.056 2.337.13 2.763-.985 4.696-2.156 5.867a5.808 5.808 0 01-3.415 1.54c-1.07.057-1.363.067-2.337.067-2.43 0-2.723-.01-3.697-.056-2.763-.13-4.696-.985-5.867-2.156A5.808 5.808 0 012 13.782c0-1.07-.01-1.363-.056-2.337-.13-2.763.985-4.696 2.156-5.867A5.808 5.808 0 0110.218 2H12.315zM12 15.111a3.111 3.111 0 100-6.222 3.111 3.111 0 000 6.222z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: LinkedIn -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.766s.784-1.766 1.75-1.766 1.75.79 1.75 1.766-.783 1.766-1.75 1.766zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="organizer-card p-6 rounded-2xl flex flex-col items-center">
+                    <img src="https://placehold.co/200x200/5C7699/FFF?text=Luis%20Miguel" alt="Foto de Luis Miguel" class="w-32 h-32 rounded-full mb-4 object-cover">
+                    <h3 class="text-xl font-semibold">Luis Miguel</h3>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: Instagram -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.723.01 3.697.056 2.763.13 4.696.985 5.867 2.156A5.808 5.808 0 0022 10.218c0 1.07.01 1.363.056 2.337.13 2.763-.985 4.696-2.156 5.867a5.808 5.808 0 01-3.415 1.54c-1.07.057-1.363.067-2.337.067-2.43 0-2.723-.01-3.697-.056-2.763-.13-4.696-.985-5.867-2.156A5.808 5.808 0 012 13.782c0-1.07-.01-1.363-.056-2.337-.13-2.763.985-4.696 2.156-5.867A5.808 5.808 0 0110.218 2H12.315zM12 15.111a3.111 3.111 0 100-6.222 3.111 3.111 0 000 6.222z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: LinkedIn -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.766s.784-1.766 1.75-1.766 1.75.79 1.75 1.766-.783 1.766-1.75 1.766zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="organizer-card p-6 rounded-2xl flex flex-col items-center">
+                    <img src="https://placehold.co/200x200/5C7699/FFF?text=Outro%20Integrante" alt="Foto de Outro integrante" class="w-32 h-32 rounded-full mb-4 object-cover">
+                    <h3 class="text-xl font-semibold">Outro integrante</h3>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: Instagram -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.723.01 3.697.056 2.763.13 4.696.985 5.867 2.156A5.808 5.808 0 0022 10.218c0 1.07.01 1.363.056 2.337.13 2.763-.985 4.696-2.156 5.867a5.808 5.808 0 01-3.415 1.54c-1.07.057-1.363.067-2.337.067-2.43 0-2.723-.01-3.697-.056-2.763-.13-4.696-.985-5.867-2.156A5.808 5.808 0 012 13.782c0-1.07-.01-1.363-.056-2.337-.13-2.763.985-4.696 2.156-5.867A5.808 5.808 0 0110.218 2H12.315zM12 15.111a3.111 3.111 0 100-6.222 3.111 3.111 0 000 6.222z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: LinkedIn -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.766s.784-1.766 1.75-1.766 1.75.79 1.75 1.766-.783 1.766-1.75 1.766zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="organizer-card p-6 rounded-2xl flex flex-col items-center">
+                    <img src="https://placehold.co/200x200/5C7699/FFF?text=Outro%20Integrante" alt="Foto de Outro integrante" class="w-32 h-32 rounded-full mb-4 object-cover">
+                    <h3 class="text-xl font-semibold">Outro integrante</h3>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: Instagram -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.723.01 3.697.056 2.763.13 4.696.985 5.867 2.156A5.808 5.808 0 0022 10.218c0 1.07.01 1.363.056 2.337.13 2.763-.985 4.696-2.156 5.867a5.808 5.808 0 01-3.415 1.54c-1.07.057-1.363.067-2.337.067-2.43 0-2.723-.01-3.697-.056-2.763-.13-4.696-.985-5.867-2.156A5.808 5.808 0 012 13.782c0-1.07-.01-1.363-.056-2.337-.13-2.763.985-4.696 2.156-5.867A5.808 5.808 0 0110.218 2H12.315zM12 15.111a3.111 3.111 0 100-6.222 3.111 3.111 0 000 6.222z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: LinkedIn -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.766s.784-1.766 1.75-1.766 1.75.79 1.75 1.766-.783 1.766-1.75 1.766zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="organizer-card p-6 rounded-2xl flex flex-col items-center">
+                    <img src="https://placehold.co/200x200/5C7699/FFF?text=Outro%20Integrante" alt="Foto de Outro integrante" class="w-32 h-32 rounded-full mb-4 object-cover">
+                    <h3 class="text-xl font-semibold">Outro integrante</h3>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: Instagram -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.723.01 3.697.056 2.763.13 4.696.985 5.867 2.156A5.808 5.808 0 0022 10.218c0 1.07.01 1.363.056 2.337.13 2.763-.985 4.696-2.156 5.867a5.808 5.808 0 01-3.415 1.54c-1.07.057-1.363.067-2.337.067-2.43 0-2.723-.01-3.697-.056-2.763-.13-4.696-.985-5.867-2.156A5.808 5.808 0 012 13.782c0-1.07-.01-1.363-.056-2.337-.13-2.763.985-4.696 2.156-5.867A5.808 5.808 0 0110.218 2H12.315zM12 15.111a3.111 3.111 0 100-6.222 3.111 3.111 0 000 6.222z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-indigo-300 hover:text-indigo-100 transition-colors duration-200">
+                            <!-- Ícone de rede social - Ex: LinkedIn -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.766s.784-1.766 1.75-1.766 1.75.79 1.75 1.766-.783 1.766-1.75 1.766zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 hidden z-50">
@@ -89,6 +289,11 @@
                 icon: '👕',
                 title: 'Moletons e Camisetas da Filosofia',
                 description: 'Criação e venda de vestuário personalizado do curso de Filosofia. Com designs criativos e referências filosóficas, o projeto busca criar um sentimento de identidade e pertencimento entre os alunos, além de arrecadar fundos para outras atividades do D.A.'
+            },
+            {
+                icon: '✉️',
+                title: 'Newsletter do DA',
+                description: 'Criação de uma newsletter mensal com o objetivo de informar a comunidade acadêmica sobre eventos, novidades do D.A., artigos de interesse, oportunidades de pesquisa e muito mais. A newsletter será uma ferramenta de comunicação direta e eficiente para manter todos atualizados.'
             }
         ];
 
